@@ -98,6 +98,7 @@ import static com.prolificinteractive.materialcalendarview.MaterialCalendarView.
     }
     if(date.getDay()== Calendar.getInstance().get(Calendar.DAY_OF_MONTH)){
       setText("今");
+
     }else{
       setText(getLabel());
     }
@@ -117,6 +118,8 @@ import static com.prolificinteractive.materialcalendarview.MaterialCalendarView.
   @NonNull
   public String getLabel() {
     if(date.getDay()== Calendar.getInstance().get(Calendar.DAY_OF_MONTH)){
+      setTextColor(getTextColors().getColorForState(
+              new int[] { -android.R.attr.state_enabled }, Color.BLACK));
       return "今";
     }else{
       return formatter.format(date);

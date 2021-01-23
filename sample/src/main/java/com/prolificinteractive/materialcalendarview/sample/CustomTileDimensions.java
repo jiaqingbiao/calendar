@@ -111,7 +111,6 @@ public class CustomTileDimensions extends AppCompatActivity {
     @Override
     public void decorate(DayViewFacade view) {
       view.setBackgroundDrawable(backgroundDrawable);
-      view.addSpan("今天");
     }
   }
 }
