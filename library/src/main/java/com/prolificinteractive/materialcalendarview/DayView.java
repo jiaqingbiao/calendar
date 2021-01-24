@@ -18,6 +18,7 @@ import android.support.v7.widget.AppCompatCheckedTextView;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView.ShowOtherDates;
 import com.prolificinteractive.materialcalendarview.format.DayFormatter;
@@ -75,6 +76,13 @@ import static com.prolificinteractive.materialcalendarview.MaterialCalendarView.
     }
 
   }
+
+  @Override
+  public boolean isEnabled() {
+    return false;
+  }
+
+
 
   /**
    * Set the new label formatter and reformat the current label. This preserves current spans.
@@ -322,5 +330,11 @@ import static com.prolificinteractive.materialcalendarview.MaterialCalendarView.
       tempRect.set(0, offset, width, radius + offset);
       circleDrawableRect.set(0, circleOffset, width, radius + circleOffset);
     }
+  }
+
+
+  @Override
+  public boolean onTouchEvent(MotionEvent event) {
+    return false;
   }
 }
