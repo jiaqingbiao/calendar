@@ -128,7 +128,7 @@ import static com.prolificinteractive.materialcalendarview.MaterialCalendarView.
     if(date.getDay()== Calendar.getInstance().get(Calendar.DAY_OF_MONTH)){
       setTextColor(getTextColors().getColorForState(
               new int[] { -android.R.attr.state_enabled }, Color.BLACK));
-      setTextSize(17f);
+      setTextSize(14f);
       return "今";
     }else{
       return formatter.format(date);
