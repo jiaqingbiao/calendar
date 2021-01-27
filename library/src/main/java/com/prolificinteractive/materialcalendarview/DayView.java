@@ -126,8 +126,8 @@ import static com.prolificinteractive.materialcalendarview.MaterialCalendarView.
   @NonNull
   public String getLabel() {
     if(date.getDay()== Calendar.getInstance().get(Calendar.DAY_OF_MONTH)){
-      setTextColor(getTextColors().getColorForState(
-              new int[] { -android.R.attr.state_enabled }, Color.BLACK));
+//      setTextColor(getTextColors().getColorForState(
+//              new int[] { -android.R.attr.state_enabled }, Color.BLACK));
       setTextSize(14f);
       return "今";
     }else{
@@ -308,10 +308,12 @@ import static com.prolificinteractive.materialcalendarview.MaterialCalendarView.
     }
   }
 
+
+
   @Override
   protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
     super.onLayout(changed, left, top, right, bottom);
-    calculateBounds(right - left, bottom - top);
+    calculateBounds(right- left, bottom - top);
     regenerateBackground();
   }
 
